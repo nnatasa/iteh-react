@@ -4,7 +4,11 @@ const Navbar = () => {
             <h1>Biblioteka Visnjica</h1>
             <div className="links">
                 <a href='/'>Home</a>
-                <a href='/create'>Nova knjiga</a>
+                <a href='/create' style={{
+                    color: "white",
+                    backgroundColor: '#c71f51',
+                    borderRadius: '8px',
+                }}>Nova knjiga</a>
             </div>
         </nav>
      );
