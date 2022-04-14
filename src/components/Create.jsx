@@ -2,19 +2,25 @@ import React, {Component} from 'react';
 
 import { useState } from "react";
 
-const Create = () => {
+const Create = ({updateBooks}) => {
+
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
-  const [author, setAuthor] = useState('mario');
-
+  const [author, setAuthor] = useState('Ivo Andric');
+  const [id, setId] = useState(4);
+  
   const handleSubmit = (e) => {
     e.preventDefault();
-    const book = {title, description, author};
+    const a = id + 1;
+    setId(a);
+    const book = {title, description, author, id};
+    //console.log(book);
+    //() => updateBooks(book);
   }
   return (
     <div className="create">
       <h2>Dodaj novu knjigu</h2>
-      <form onSubmit={handleSubmit}>
+      <form>
         <label>Naziv knjige:</label>
         <input 
           type="text" 
@@ -33,11 +39,11 @@ const Create = () => {
           value={author}
           onChange={(e) => setAuthor(e.target.value)}
         >
-        <option value="jjzmaj">Jovan Jovanovic Zmaj</option>
-          <option value="ivoandric">Ivo Andric</option>
-          <option value="mesaselimovic">Mesa Selimovic</option>
+        <option value="Jovan Jovanovic Zmaj">Jovan Jovanovic Zmaj</option>
+          <option value="Ivo Andric">Ivo Andric</option>
+          <option value="Mesa Selimovic">Mesa Selimovic</option>
         </select>
-        <button type="btn">Dodaj</button>
+        <button>Dodaj</button>
       </form>
     </div>
   );
