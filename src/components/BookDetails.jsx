@@ -1,4 +1,5 @@
 import { useParams } from "react-router-dom/cjs/react-router-dom.min";
+import React, {Component} from 'react';
 
 const BookDetails = () => {
 

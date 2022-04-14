@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import Books from "./Books";
+import React, {Component} from 'react';
 
 const Home = () => {
     
