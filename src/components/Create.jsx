@@ -10,7 +10,6 @@ const Create = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     const book = {title, description, author};
- 
   }
   return (
     <div className="create">
@@ -38,7 +37,7 @@ const Create = () => {
           <option value="ivoandric">Ivo Andric</option>
           <option value="mesaselimovic">Mesa Selimovic</option>
         </select>
-        <button>Dodaj</button>
+        <button type="btn">Dodaj</button>
       </form>
     </div>
   );
